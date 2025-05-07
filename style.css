@@ -65,12 +65,18 @@
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
 }
 
+.navication>.sign-in>a{
+    text-decoration: none;
+    color: white;
+}
+
 
 .banner{
     width: 100vw;
-    height: 90vh;
+    height: 110vh;
     background: url(./img/banner.jpg);
-    position: relative;
+    /* position: relative; */
+    position: absolute;
     top: -10vh;
     background-size: cover;
     background-position: center;
@@ -149,4 +155,182 @@ p{
 
     border: none;
     border-radius: 5px;
+}
+
+
+
+
+/* sign in pg  */
+
+.sign-banner{
+    width: 100%;
+    height:110vh;
+    background: url(./img/sign-banner.jpg);
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    /* position: relative; */
+    position: absolute;
+    top: -10vh;
+    z-index: -1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.sign-banner::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.615);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.form>*{
+    color: white;
+    z-index: 1;
+}
+
+.form {
+    width: 400px;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.745);
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 11px;   
+}
+
+.form>.head{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.form > .input> input{
+    width: 300px;
+    height: 50px;
+    margin: 5px 0;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding-left: 20px;
+
+    font-size: 16px;
+    color: white;
+}
+
+.form>.input>input::placeholder{
+    color: rgb(192, 191, 191);
+}
+
+.form > .button-sign {
+    width: 300px;
+    height: 40px;
+    background-color: red;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.form>.button-sign:hover{
+    background-color: rgb(124, 4, 4);
+}
+
+.form > .or{
+    width: 100%;
+    text-align: center;
+}
+
+.form > .code {
+    width: 300px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.107);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.form > .forget {
+   width: 100%;
+   text-align: center;
+}
+
+.form>.forget>a{
+    color: white;
+    font-size: 17px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #ffffff;
+    /* Green background */
+    border-color: #ffffff;
+}
+
+input[type="checkbox"]:checked::after{
+    content: "✓";
+    color: rgb(0, 0, 0);
+    position: absolute;
+    left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+}
+.form>.check-box{
+    display: flex;
+    gap: 10px;
+}
+.form > .check-box span{
+    font-size: 18px;
+}
+
+.form > .signUp {
+    font-size: 18px;
+    color: #8c8b8b;
+}
+
+.form>.signUp > a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+.form > .para {
+    font-size: 15px;
+    color: #8c8b8b;
+}
+
+.form > .learn-more > a {
+  color: rgb(58, 100, 205);
 }
